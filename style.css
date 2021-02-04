@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+nav {
+  padding: 5px 0px;
+  background: -webkit-gradient(linear, right top, left top, from(red), to(blue));
+  background: linear-gradient(to left, red, blue);
+}
+
+nav #NavContentWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav #NavContentWrapper h2 {
+  color: aliceblue;
+}
+
+nav #NavContentWrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav #NavContentWrapper ul li {
+  list-style: none;
+  margin: 0px 20px;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav #NavContentWrapper ul li:hover {
+  text-shadow: 1px 1px 10px white;
+}
+
+nav #NavContentWrapper #Burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: purple;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav ul li {
+    margin: 10px 0px !important;
+  }
+  nav #Burger {
+    display: block !important;
+    z-index: 10;
+  }
+  nav #Burger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav-active {
+    -webkit-transform: translate(0) !important;
+            transform: translate(0) !important;
+  }
+}
+
+.toogle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toogle .line2 {
+  opacity: 0;
+}
+
+.toogle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+/*# sourceMappingURL=style.css.map */
